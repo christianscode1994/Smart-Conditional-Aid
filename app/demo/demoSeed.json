@@ -1,0 +1,21 @@
+{
+  "issued": [
+    {
+      "id": "v-demo-1",
+      "beneficiary": "demo-beneficiary-1",
+      "amount": "10",
+      "issuedAt": "2025-01-01T00:00:00Z",
+      "nonce": "demo1",
+      "signature": "demo-signature"
+    },
+    {
+      "id": "v-demo-2",
+      "beneficiary": "demo-beneficiary-2",
+      "amount": "15",
+      "issuedAt": "2025-01-01T00:05:00Z",
+      "nonce": "demo2",
+      "signature": "demo-signature"
+    }
+  ],
+  "redeemed": []
+}
