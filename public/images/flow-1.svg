@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="675" viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Flow diagram placeholder">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#f6f8fa"/>
+      <stop offset="1" stop-color="#e9eef6"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#g)"/>
+  <g transform="translate(60,60)">
+    <rect x="0" y="0" width="1080" height="555" rx="12" fill="#ffffff" stroke="#e1e8f0" stroke-width="1"/>
+    <text x="540" y="90" font-family="Inter, Arial, sans-serif" font-size="28" fill="#213547" text-anchor="middle">Flow 1 — Demo Flow Diagram</text>
+
+    <g transform="translate(40,140)" fill="#ffffff" stroke="#c8d7ea" stroke-width="1" font-family="Inter, Arial, sans-serif">
+      <rect x="0" y="0" width="300" height="90" rx="8" fill="#3b82f6" />
+      <text x="150" y="56" font-size="18" fill="#ffffff" text-anchor="middle">Issue Voucher</text>
+
+      <rect x="360" y="0" width="300" height="90" rx="8" fill="#06b6d4" />
+      <text x="510" y="56" font-size="18" fill="#ffffff" text-anchor="middle">Offline Claim (QR)</text>
+
+      <rect x="720" y="0" width="300" height="90" rx="8" fill="#10b981" />
+      <text x="870" y="56" font-size="18" fill="#ffffff" text-anchor="middle">Redeem & Receipt</text>
+
+      <line x1="300" y1="45" x2="360" y2="45" stroke="#9fbce6" stroke-width="3" stroke-linecap="round"/>
+      <line x1="660" y1="45" x2="720" y2="45" stroke="#9fbce6" stroke-width="3" stroke-linecap="round"/>
+    </g>
+
+    <text x="540" y="540" font-family="Inter, Arial, sans-serif" font-size="14" fill="#475569" text-anchor="middle">Placeholder image — replace with a real flow diagram for the demo</text>
+  </g>
+</svg>
