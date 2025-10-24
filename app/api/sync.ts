@@ -1,18 +1,20 @@
-// Minimal sync endpoint: accepts an array of redeemed receipts and returns reconciliation result
-import { NextApiRequest, NextApiResponse } from 'next';
+// app/api/sync/route.ts
+import { NextResponse } from 'next/server';
 import { reconcileReceipts } from '../../lib/storage';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-
+export async function POST(request: Request) {
   try {
-    const { receipts } = req.body || {};
-    if (!Array.isArray(receipts)) return res.status(400).json({ error: 'receipts array required' });
+    const body = await request.json().catch(() => ({}));
+    const receipts = body?.receipts;
+
+    if (!Array.isArray(receipts)) {
+      return NextResponse.json({ error: 'receipts array required' }, { status: 400 });
+    }
 
     const result = await reconcileReceipts(receipts);
-    return res.status(200).json({ ok: true, result });
+    return NextResponse.json({ ok: true, result }, { status: 200 });
   } catch (err: any) {
     console.error('sync error', err);
-    return res.status(500).json({ error: err?.message || 'internal' });
+    return NextResponse.json({ error: err?.message || 'internal' }, { status: 500 });
   }
 }
