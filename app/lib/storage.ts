@@ -1,4 +1,4 @@
-// lib/storage.ts
+// app/lib/storage.ts
 export type Voucher = { id?: string; nonce?: string; [k: string]: any; };
 export type Receipt = { receiptId?: string; id?: string; nonce?: string; [k: string]: any; };
 
