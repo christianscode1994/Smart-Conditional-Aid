@@ -1,3 +1,4 @@
+'use client';
 import React, { useEffect, useState } from 'react';
 import HeroCard from './components/HeroCard';
 import GrantForm from './components/GrantForm';
