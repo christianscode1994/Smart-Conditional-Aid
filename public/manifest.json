@@ -1,0 +1,8 @@
+{
+  "name": "Smart Conditional Aid (prototype)",
+  "short_name": "SCAid",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "description": "Grant-as-code prototype with offline claim and reconciliation demo."
+}
