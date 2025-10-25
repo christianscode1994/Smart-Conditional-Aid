@@ -23,3 +23,8 @@ export async function reconcileReceipts(receipts: Receipt[]) {
   });
   return { totalReceipts: receipts.length, matches };
 }
+
+export async function clearStorage() {
+  issued = [];
+  redeemed = [];
+}
