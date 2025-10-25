@@ -1,11 +1,13 @@
-// Prototype blockchain helpers (mock)
-// In a real implementation these would interact with ethers.js / provider
-export async function sendVoucherToChain(voucher: any) {
-  // demo-only: pretend we wrote an on-chain receipt
-  return { txHash: `0x${Math.random().toString(16).slice(2,10)}`, voucherId: voucher.id };
+// app/lib/chainMock.ts
+export type ChainReceipt = { txHash: string; voucherId?: string };
+
+export async function sendVoucherToChain(voucher: any): Promise<ChainReceipt> {
+  // demo-only deterministic-ish txHash for reproducible testing
+  const rand = Math.floor(Math.random() * 0xffffffff).toString(16).padStart(8, '0');
+  return { txHash: `0x${rand}`, voucherId: voucher?.id };
 }
 
-export async function checkOnChainVoucher(id: string) {
-  // demo: always return not-on-chain
+export async function checkOnChainVoucher(id: string): Promise<null | ChainReceipt> {
+  // demo: always return null (not on chain)
   return null;
 }
