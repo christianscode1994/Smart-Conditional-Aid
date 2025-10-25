@@ -2,14 +2,12 @@
   "name": "smart-conditional-aid12",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": ">=18"
-  },
+  "engines": { "node": ">=18" },
   "scripts": {
     "dev": "next dev",
-    "build": "npm run predeploy && next build",
+    "build": "node ./scripts/predeploy.js && next build",
     "start": "next start -p $PORT",
-    "predeploy": "bash ./scripts/predeploy.sh",
+    "predeploy": "node ./scripts/predeploy.js",
     "seed-demo": "node ./scripts/seed-demo.js",
     "sanity-test": "node ./scripts/sanity-test.js",
     "lint": "eslint . --ext .js,.ts,.tsx || true"
@@ -24,6 +22,6 @@
     "typescript": "^5.6.4",
     "@types/react": "^18.2.21",
     "@types/node": "^20.5.1",
-    "@netlify/plugin-nextjs": "^6.0.0"
+    "@netlify/plugin-nextjs": "^5.6.0"
   }
 }
